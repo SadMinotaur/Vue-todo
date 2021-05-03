@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Card />
+    <Card v-for="item in testArray" :key="item.message" name="test" />
   </div>
 </template>
 
@@ -12,6 +12,7 @@ export default {
   components: {
     Card,
   },
+  data: () => ({ testArray: [{ message: "1" }, { message: "2" }] }),
 };
 </script>
 
